@@ -1,0 +1,12 @@
+[Unit]
+Description=Hadoop Tasktracker
+Requires=hadoop-jobtracker.service
+After=hadoop-jobtracker.service
+
+[Service]
+ExecStart=/usr/bin/hadoop tasktracker
+User=mapred
+Group=hadoop
+
+[Install]
+WantedBy=multi-user.target

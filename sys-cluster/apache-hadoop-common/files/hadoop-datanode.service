@@ -1,0 +1,12 @@
+[Unit]
+Description=Hadoop Datanode
+Requires=hadoop-namenode.service
+After=hadoop-namenode.service
+
+[Service]
+ExecStart=/usr/bin/hadoop datanode
+User=hdfs
+Group=hadoop
+
+[Install]
+WantedBy=multi-user.target

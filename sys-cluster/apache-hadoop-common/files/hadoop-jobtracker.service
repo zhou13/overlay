@@ -1,0 +1,12 @@
+[Unit]
+Description=Hadoop Jobtracker
+Requires=hadoop-datanode.service
+After=hadoop-datanode.service
+
+[Service]
+ExecStart=/usr/bin/hadoop jobtracker
+User=mapred
+Group=hadoop
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Hadoop Namenode
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/hadoop namenode
+User=hdfs
+Group=hadoop
+
+[Install]
+WantedBy=multi-user.target
